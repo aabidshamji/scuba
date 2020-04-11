@@ -11,9 +11,25 @@
     <% end %>
   </p>
 
+  <h2 class="comments">
+    Date: <%= @post.dive_date %>
+  </h2>
+
+  <h2 class="comments">
+    Depth: <%= @post.duration %> meters
+  </h2>
+
+  <h2 class="comments">
+  Duration: <%= @post.depth %> minutes
+</h2>
+
+  <h3 class="comments">
+    Additional Remarks:
+  </h3>
   <p class="body">
     <%= @post.body %>
   </p>
+
 
   <div id="comments">
     <h2><%= @post.comments.count %> Comments</h2>

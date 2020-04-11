@@ -10,13 +10,33 @@
     </div>
   <% end %>
   <p>
-    <%= f.label :title %><br>
+    Location<br>
     <%= f.text_field :title %>
   </p>
+
   <p>
-    <%= f.label :body %><br>
+    Date<br>
+    <%= f.date_select :dive_date,
+                      {order: [:month, :day, :year],
+                              prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }},
+                      {required: true} %>
+  </p>
+
+  <p>
+    Duration (Mins) <br>
+    <%= f.number_field :duration %>
+  </p>
+
+  <p>
+    Max Depth (Meters) <br>
+    <%= f.number_field :depth %>
+  </p>
+
+  <p>
+    Remarks<br>
     <%= f.text_area :body %>
   </p>
+
   <p>
     <%= f.submit %>
   </p>

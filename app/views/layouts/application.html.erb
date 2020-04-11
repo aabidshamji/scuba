@@ -14,8 +14,8 @@
   <body>
     <div id="sidebar">
       <ul>
-        <li class="category"> <%= link_to "My Scuba", root_path %></li>
-        <li> <%= link_to "Posts", root_path %> </li>
+        <li class="category"> <%= link_to "My Scuba Log", root_path %></li>
+        <li> <%= link_to "Dives", root_path %> </li>
         <li> <%= link_to "About", about_path %> </li>
       </ul>
 
@@ -28,12 +28,12 @@
         <% elsif current_page?(about_path)%>
           <p>About Me</p>
         <% else %>
-          <%= link_to "Back to Post Feed", root_path %>
+          <%= link_to "Back to Log", root_path %>
         <% end  %>
 
         <% if user_signed_in? %>
         <div class="buttons">
-          <button class="button"> <%= link_to "Make Post" , new_post_path %></button>
+          <button class="button"> <%= link_to "Log Dive" , new_post_path %></button>
           <button class="button"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>></button>
         </div>
           <% else  %>
